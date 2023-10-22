@@ -36,6 +36,46 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -170,6 +210,7 @@ Consideremos el siguiente ejemplo, una empresa acaba de adquirir cuatro impresor
 \(X\) son entonces \(0, 1, 2, 3 \,\, y\,\, 4\). La distribución de probabilidad diría cómo está subdividida la probabilidad de uno entre los cinco posibles valores: ¿cuánta probabilidad está asociada con el valor 0 de \(X\), cuánta está adjudicada con 1 de \(X\) y así sucesivamente?. Se utiliza la siguiente notación para las probabilidades:
 
 \(p(0) =\) la probabilidad del valor 0 de \(X = P(X=0)\)
+
 \(p(1) =\) la probabilidad del valor 1 de \(X = P(X=1)\)
 
 y así sucesivamente. En general, \(p(x)\) denotará la probabilidad asignada al valor de \(x\).
@@ -210,6 +251,28 @@ y así sucesivamente. En general, \(p(x)\) denotará la probabilidad asignada al
 \end{equation}
 
 La situación anterior graficamente queda
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\NormalTok{ df }\OtherTok{=} \FunctionTok{data.frame}\NormalTok{(}\StringTok{"x"} \OtherTok{=} \DecValTok{0}\SpecialCharTok{:}\DecValTok{6}\NormalTok{, }\CommentTok{\# Valores de X}
+                \StringTok{"p"} \OtherTok{=} \FunctionTok{c}\NormalTok{(}\FloatTok{0.05}\NormalTok{,}\FloatTok{0.10}\NormalTok{,}\FloatTok{0.15}\NormalTok{,}\FloatTok{0.25}\NormalTok{,}\FloatTok{0.20}\NormalTok{,}\FloatTok{0.15}\NormalTok{,}\FloatTok{0.10}\NormalTok{)) }\CommentTok{\# Probabilidades asociadas}
+\FunctionTok{ggplot}\NormalTok{( }\CommentTok{\# Ambiente gráfico}
+  \AttributeTok{data =}\NormalTok{ df, }\CommentTok{\# Base de datos a utilizar}
+  \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ x, }\CommentTok{\# Variable del eje X}
+      \AttributeTok{y =}\NormalTok{ p)) }\SpecialCharTok{+} \CommentTok{\# Variable del eje Y}
+  \FunctionTok{geom\_point}\NormalTok{() }\SpecialCharTok{+} \CommentTok{\# Tipo de gráfico}
+  \FunctionTok{geom\_segment}\NormalTok{( }\CommentTok{\# Añadimos segmentos}
+    \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ x, }\CommentTok{\# Coordenada X de los puntos de inicio}
+        \AttributeTok{y =} \FunctionTok{rep}\NormalTok{(}\DecValTok{0}\NormalTok{,}\FunctionTok{length}\NormalTok{(x)), }\CommentTok{\# Coordenada Y de los puntos de inicio}
+        \AttributeTok{xend =}\NormalTok{ x, }\CommentTok{\# Coordenada X de los puntos de llegada}
+        \AttributeTok{yend =}\NormalTok{ p)) }\SpecialCharTok{+} \CommentTok{\# Coordenada Y de los puntos de llegada}
+  \FunctionTok{labs}\NormalTok{( }\CommentTok{\# Edición de títulos}
+    \AttributeTok{title =} \StringTok{"Probabilidades de cada valor"}\NormalTok{, }\CommentTok{\# Título del gráfico}
+    \AttributeTok{x =} \StringTok{"Valores del experimento (x)"}\NormalTok{, }\CommentTok{\# Título de eje X}
+    \AttributeTok{y =} \StringTok{"Probabilidades"}\NormalTok{) }\CommentTok{\# Título del eje Y}
+\end{Highlighting}
+\end{Shaded}
 
 \begin{figure}
 
