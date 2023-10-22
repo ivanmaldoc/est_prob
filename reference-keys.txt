@@ -2,11 +2,3 @@ profundización-en-estadística-y-probabidades
 variable-aleatoria
 variables-aleatorias-discretas-v.a.d
 función-de-masa-de-probabilidad
-función-de-distribución-acumulada
-distribuciones
-muestreo
-estadítica-inferencial
-correlación-y-modelos-de-regresión-simples
-recursos-didacticos-para-la-enseñanza-de-la-estadística-y-probabidad
-microenseñanzas
-temas-de-presentaciones
