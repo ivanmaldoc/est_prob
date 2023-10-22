@@ -1,0 +1,211 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{natbib}
+\bibliographystyle{plainnat}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Conocimiento pedagógico del eje probabilidad y estadística},
+  pdfauthor={Profesor: Iván Maldonado},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Conocimiento pedagógico del eje probabilidad y estadística}
+\author{Profesor: Iván Maldonado}
+\date{Actualización 2023-10-22}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{programa}{%
+\chapter*{Programa}\label{programa}}
+\addcontentsline{toc}{chapter}{Programa}
+
+\href{https://correouss-my.sharepoint.com/:b:/g/personal/imaldonadoc1_docente_uss_cl/EXfiKuJSO7JCle9L_86S0EMBeDkr3OyYHprvy0Rc0Jj4mQ?e=JcPOWy}{Descargar programa de estudio}
+
+\hypertarget{profundizaciuxf3n-en-estaduxedstica-y-probabidades}{%
+\chapter{Profundización en Estadística y Probabidades}\label{profundizaciuxf3n-en-estaduxedstica-y-probabidades}}
+
+\hypertarget{variable-aleatoria}{%
+\section{Variable Aleatoria}\label{variable-aleatoria}}
+
+Una variable aleatoria proporciona un medio para describir los resultados experimentales utilizando valores numéricos, es decir, una variable aleatoria asocia un valor numérico a cada uno de los resultados experimentales. Una variable aleatoria puede ser discreta o continua, depende del tipo de valores numéricos que asuma. (\protect\hyperlink{ux5cux2520Referencias}{Anderson}. 2008, página 187).
+
+\begin{itemize}
+\tightlist
+\item
+  Una variable aleatoria se denomina \textbf{discreta} si asume un número finito de valores o una sucesión infinita de valores tales como \(0,1,2,\ldots\). Consideremos el siguiente experimento como ejemplo: un contador presenta el examen para certificarse como contador público. El examen tiene cuatro partes. Defina una variable aleatoria \(X\) como \(X =\) número de partes del examen aprobadas. Esta es una variable aleatoria discreta porque puede tomar el número finito de valores \(0,1,2,3\,\,o \,\, 4\)
+\end{itemize}
+
+Otros ejemplos se pueden observar en la siguiente tabla.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Experimento
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Variable aleatoria (\(X\))
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Valores posibles para la variable aleatoria
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Llamar a cinco clientes & Número de clientes que hacen un pedido & \(0,1,2,3,4,5\) \\
+Inspeccionar un envío de 50 radios & Número de radios que tienen algún defecto & \(0,1,2,…,49,50\) \\
+Hacerse cargo de un restaurante durante el día & Número de clientes & \(0,1,2,3,…\) \\
+Vender un automóvil & Sexo del cliente & 0 si el hombre, 1 si es mujer \\
+\end{longtable}
+
+\begin{itemize}
+\tightlist
+\item
+  Una variable aleatoria se denomina \textbf{continua} si puede tomar cualquier valor numéricos dentro de un intervalo. Los resultados experimentales basados en escalas de medición tales como tiempo, peso, distancia y temperatura puede ser descritos por variables aleatorias continuas. Consideremos el siguiente experimento como ejemplo: observar las llamadas telefónicas que llegan a la oficina de atención de una importante empresa de seguros. La variable aleatoria que interesa es\\
+  \(X=\) tiempo en minutos entre dos llamadas consecutivas. Esta variable aleatoria puede tomar cualquier valor en el intervalo \([0,\infty)\). En efecto, \(x\) puede tomar un número infinito de valores, entre los cuales se encuentra valores como \(1.25\) minutos \(3.4562\) minutos, \(4.33333\) minutos, etc.
+\end{itemize}
+
+En la siguiente tabla aparecen otros ejemplos de variables aleatorias continuas.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2727}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2727}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4545}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Experimento
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Variable aleatoria (\(X\))
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Valores posibles para la variable aleatoria
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Operar un banco & Tiempo en minutos entre la llegada de los clientes & \(x\geq 0\) \\
+Llenar una lata de cerveza (capacidad máxima 350cc) & Cantidad en cc & \(0\leq x \leq 350\) \\
+Llegada de Autobuses & Tiempo entre llegadas sucesivas de autobuses en una parada & \(x\geq 0\) \\
+Probar un proceso químico nuevo & Temperatura a la que tiene lugar la reacción deseada (mín. 150 grados F, máx. 212 grados F) & \(150\leq x \leq 212\) \\
+\end{longtable}
+
+\hypertarget{variables-aleatorias-discretas-v.a.d}{%
+\section{Variables aleatorias discretas (v.a.d)}\label{variables-aleatorias-discretas-v.a.d}}
+
+La distribución de probabilidad de una variable aleatoria discreta describe como se distribuyen las probabilidades entre los valores de la variable aleatoria. En el caso de una variable aleatoria discreta \(x\), la distribución de probabilidad está definida por una función de probabilidad o también llamada \textbf{función de masa de probabilidad} (fmp) (\protect\hyperlink{ux5cux2520Referencias}{Devore}, 2008, página 90).
+
+\hypertarget{funciuxf3n-de-masa-de-probabilidad}{%
+\subsection{Función de masa de probabilidad}\label{funciuxf3n-de-masa-de-probabilidad}}
+
+\hypertarget{funciuxf3n-de-distribuciuxf3n-acumulada}{%
+\subsection{Función de distribución acumulada}\label{funciuxf3n-de-distribuciuxf3n-acumulada}}
+
+\hypertarget{distribuciones}{%
+\subsection{Distribuciones}\label{distribuciones}}
+
+\hypertarget{muestreo}{%
+\section{Muestreo}\label{muestreo}}
+
+\hypertarget{estaduxedtica-inferencial}{%
+\section{Estadítica inferencial}\label{estaduxedtica-inferencial}}
+
+\hypertarget{correlaciuxf3n-y-modelos-de-regresiuxf3n-simples}{%
+\section{Correlación y modelos de regresión simples}\label{correlaciuxf3n-y-modelos-de-regresiuxf3n-simples}}
+
+\hypertarget{recursos-didacticos-para-la-enseuxf1anza-de-la-estaduxedstica-y-probabidad}{%
+\chapter{Recursos didacticos para la enseñanza de la Estadística y Probabidad}\label{recursos-didacticos-para-la-enseuxf1anza-de-la-estaduxedstica-y-probabidad}}
+
+\hypertarget{microenseuxf1anzas}{%
+\section{Microenseñanzas}\label{microenseuxf1anzas}}
+
+\hypertarget{temas-de-presentaciones}{%
+\section{Temas de presentaciones}\label{temas-de-presentaciones}}
+
+\href{https://correouss-my.sharepoint.com/:f:/r/personal/imaldonadoc1_docente_uss_cl/Documents/doc/temas?csf=1\&web=1}{Temas de presentaciones}
+
+\hypertarget{referencias}{%
+\chapter*{Referencias}\label{referencias}}
+\addcontentsline{toc}{chapter}{Referencias}
+
+Anderson, D. R., Sweeney, D. J., \& Williams, T. A. (2008). Estadística para administración y economía (10a ed). Cengage Learning.
+
+Devore, J. L. (2008). Probability and statistics for engineering and the sciences (7th ed). Thomson/Brooks/Cole
+
+  \bibliography{book.bib,packages.bib}
+
+\end{document}

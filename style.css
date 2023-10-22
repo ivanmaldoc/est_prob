@@ -1,0 +1,29 @@
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+
+/* Cambiar el color de los títulos de los capítulos a rojo */
+h1.title, h1.author {
+  color: MidnightBlue;
+}
+
+ /* Cambiar el color de los títulos a rojo */
+h1 {
+    color: MidnightBlue;
+}
+
+/* Cambiar el color de los subtítulos a azul */
+h2 {
+    color: #38373c;
+}
